@@ -19,7 +19,7 @@ cache:
   image: python:3.11-slim
   before_script:
     - pip install uv --quiet
-    - uv sync --frozen
+    - uv sync --frozen --group dev
 
 # ── LINT ──────────────────────────────────────────────────────────────────────
 
