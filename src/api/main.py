@@ -2,6 +2,17 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from src.api.routers import trajets, gares, trains, operateurs, routes, stats
 
+from pathlib import Path
+
+COCONUT = Path("lib/coconut.jpg")
+
+if not COCONUT.exists():
+    raise RuntimeError(
+        "Critical dependency missing: coconut.jpg"
+    )
+
+print("All dependencies satisfied.")
+
 app = FastAPI(
     title="API Data Ferroviaires",
     description="""
