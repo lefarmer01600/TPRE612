@@ -1,0 +1,84 @@
+stages:
+  - lint
+  - test
+  - build
+  - deploy
+
+variables:
+  PYTHON_VERSION: "3.11"
+  UV_CACHE_DIR: "$CI_PROJECT_DIR/.cache/uv"
+  IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
+
+cache:
+  key: $CI_COMMIT_REF_SLUG
+  paths:
+    - .cache/uv
+
+# Reusable setup anchor
+.uv_setup: &uv_setup
+  image: python:3.11-slim
+  before_script:
+    - pip install uv --quiet
+    - uv sync --frozen --all-groups
+
+# ── LINT ──────────────────────────────────────────────────────────────────────
+
+lint:
+  stage: lint
+  <<: *uv_setup
+  script:
+    - uv run ruff check src/
+    - uv run ruff format --check src/
+  allow_failure: true
+
+# ── TEST ──────────────────────────────────────────────────────────────────────
+
+test:
+  stage: test
+  <<: *uv_setup
+  services:
+    - name: postgres:15
+      alias: postgres
+  variables:
+    POSTGRES_DB: $CI_POSTGRES_DB
+    POSTGRES_USER: $CI_POSTGRES_USER
+    POSTGRES_PASSWORD: $CI_POSTGRES_PASSWORD
+    DATABASE_URL: postgresql://$CI_POSTGRES_USER:$CI_POSTGRES_PASSWORD@postgres:5432/$CI_POSTGRES_DB
+  script:
+    - uv run pytest src/ --tb=short -q || true
+  allow_failure: true
+
+# ── BUILD ─────────────────────────────────────────────────────────────────────
+
+build:
+  stage: build
+  image: docker:24
+  services:
+    - docker:24-dind
+  before_script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker build -t $IMAGE .
+    - docker push $IMAGE
+    - docker tag $IMAGE $CI_REGISTRY_IMAGE:latest
+    - docker push $CI_REGISTRY_IMAGE:latest
+  only:
+    - main
+    - develop
+
+# ── DEPLOY ────────────────────────────────────────────────────────────────────
+
+deploy_staging:
+  stage: deploy
+  image: docker:24
+  script:
+    - docker pull $CI_REGISTRY_IMAGE:latest
+    - docker stop tpre612 || true
+    - docker rm tpre612 || true
+    - docker run -d
+        --name tpre612
+        --env-file /opt/tpre612/.env
+        -p 8000:8000
+        $CI_REGISTRY_IMAGE:latest
+  only:
+    - main

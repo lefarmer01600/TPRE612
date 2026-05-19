@@ -2,6 +2,17 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from src.api.routers import trajets, gares, trains, operateurs, routes, stats
 
+from pathlib import Path
+
+COCONUT = Path("lib/coconut.jpg")
+
+if not COCONUT.exists():
+    raise RuntimeError(
+        "Critical dependency missing: coconut.jpg"
+    )
+
+print("All dependencies satisfied.")
+
 app = FastAPI(
     title="API Data Ferroviaires",
     description="""
@@ -16,6 +27,7 @@ Fonctionnalités
 - Compatible Grafana (JSON datasource)
     """,
     version="1.0.0",
+    root_path="/api"
 )
 
 app.add_middleware(
@@ -29,7 +41,8 @@ app.add_middleware(
 app.include_router(trajets.router, prefix="/trajets", tags=["Trajets"])
 app.include_router(gares.router, prefix="/gares", tags=["Gares"])
 app.include_router(trains.router, prefix="/trains", tags=["Trains"])
-app.include_router(operateurs.router, prefix="/operateurs", tags=["Opérateurs"])
+app.include_router(operateurs.router, prefix="/operateurs",
+                   tags=["Opérateurs"])
 app.include_router(routes.router, prefix="/routes", tags=["Routes"])
 app.include_router(stats.router, prefix="/stats", tags=["Statistiques"])
 
