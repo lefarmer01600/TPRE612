@@ -76,6 +76,7 @@ deploy_staging:
     - docker run -d
         --name tpre612
         --env-file /opt/tpre612/.env
+        --add-host host.docker.internal:host-gateway
         -p 8000:8000
         $CI_REGISTRY_IMAGE:latest
   only:
