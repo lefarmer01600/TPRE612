@@ -1,0 +1,877 @@
+data_source,route_id,id_origin_city,id_destination_city,weekly_train,desserte_type
+germany,1,18511,332431,2,Sous-desservi
+germany,1,194067,332431,9,Desserte Normale
+germany,1,328823,332431,11,Desserte Normale
+germany,1,332431,194067,13,Desserte Normale
+germany,1,332431,35733,5,Sous-desservi
+germany,1,332431,368909,2,Sous-desservi
+germany,1,332431,424235,2,Sous-desservi
+germany,1,349951,332431,2,Sous-desservi
+germany,10,102204,436407,3,Sous-desservi
+germany,10,234276,603429,7,Desserte Normale
+germany,10,283361,436407,7,Desserte Normale
+germany,10,436407,283361,6,Sous-desservi
+germany,10,436407,603429,41,Desserte Normale
+germany,10,603429,436407,35,Desserte Normale
+germany,10,603429,658035,6,Sous-desservi
+germany,11,335930,428565,8,Desserte Normale
+germany,11,335930,524320,14,Desserte Normale
+germany,11,428565,335930,14,Desserte Normale
+germany,11,428565,614673,5,Sous-desservi
+germany,11,484827,335930,14,Desserte Normale
+germany,12,335930,428565,7,Desserte Normale
+germany,12,428565,335930,6,Sous-desservi
+germany,13,148532,642086,1,Sous-desservi
+germany,13,190668,642086,2,Sous-desservi
+germany,13,294867,642086,2,Sous-desservi
+germany,13,330754,642086,1,Sous-desservi
+germany,13,455130,642086,1,Sous-desservi
+germany,13,642086,148532,1,Sous-desservi
+germany,13,642086,190668,2,Sous-desservi
+germany,13,642086,330754,3,Sous-desservi
+germany,13,642086,455130,1,Sous-desservi
+germany,13,92856,642086,2,Sous-desservi
+germany,14,14207,234276,9,Desserte Normale
+germany,14,14207,436407,37,Desserte Normale
+germany,14,14207,545116,24,Desserte Normale
+germany,14,436407,14207,43,Desserte Normale
+germany,14,545116,14207,29,Desserte Normale
+germany,14,658035,14207,7,Desserte Normale
+germany,15,211512,175060,1,Sous-desservi
+germany,15,283621,321675,2,Sous-desservi
+germany,15,302694,321675,3,Sous-desservi
+germany,15,321675,169115,14,Desserte Normale
+germany,15,321675,175060,37,Desserte Normale
+germany,15,321675,283621,4,Sous-desservi
+germany,15,321675,304930,6,Sous-desservi
+germany,15,321675,313463,1,Sous-desservi
+germany,15,321675,569485,1,Sous-desservi
+germany,15,321675,603429,13,Desserte Normale
+germany,15,369695,321675,60,Bien desservi
+germany,15,369695,612763,4,Sous-desservi
+germany,15,369695,614673,9,Desserte Normale
+germany,15,369695,619377,2,Sous-desservi
+germany,15,405142,321675,3,Sous-desservi
+germany,15,405142,612763,1,Sous-desservi
+germany,15,405142,619377,1,Sous-desservi
+germany,15,603429,175060,8,Desserte Normale
+germany,15,603429,194067,1,Sous-desservi
+germany,15,603429,321675,10,Desserte Normale
+germany,15,603429,38948,1,Sous-desservi
+germany,15,603429,390636,1,Sous-desservi
+germany,15,612763,175060,2,Sous-desservi
+germany,15,612763,313463,1,Sous-desservi
+germany,15,614673,175060,6,Sous-desservi
+germany,15,614673,304930,1,Sous-desservi
+germany,15,614673,321675,5,Sous-desservi
+germany,15,6325,321675,1,Sous-desservi
+germany,15,6325,614673,1,Sous-desservi
+germany,16,142825,321675,3,Sous-desservi
+germany,16,142825,484827,8,Desserte Normale
+germany,16,142825,614673,28,Desserte Normale
+germany,16,142825,73468,13,Desserte Normale
+germany,16,211512,614673,1,Sous-desservi
+germany,16,211512,73468,1,Sous-desservi
+germany,16,321675,464710,4,Sous-desservi
+germany,16,524320,464710,7,Desserte Normale
+germany,16,607129,142825,1,Sous-desservi
+germany,16,614673,142825,25,Desserte Normale
+germany,16,614673,464710,7,Desserte Normale
+germany,16,614673,73468,3,Sous-desservi
+germany,16,73468,142825,2,Sous-desservi
+germany,16,73468,321675,3,Sous-desservi
+germany,16,73468,464710,2,Sous-desservi
+germany,16,73468,614673,3,Sous-desservi
+germany,17,102204,171516,2,Sous-desservi
+germany,17,102204,380628,8,Desserte Normale
+germany,17,171516,102204,2,Sous-desservi
+germany,17,283361,380628,7,Desserte Normale
+germany,17,380628,102204,10,Desserte Normale
+germany,17,380628,283361,6,Sous-desservi
+germany,17,380628,603429,58,Bien desservi
+germany,17,603429,380628,58,Bien desservi
+germany,18,123823,394749,2,Sous-desservi
+germany,18,394749,123823,4,Sous-desservi
+germany,18,394749,165169,2,Sous-desservi
+germany,18,394749,43717,17,Desserte Normale
+germany,18,43717,394749,16,Desserte Normale
+germany,19,274407,34644,1,Sous-desservi
+germany,19,34644,274407,3,Sous-desservi
+germany,2,130262,555280,15,Desserte Normale
+germany,2,336256,272099,1,Sous-desservi
+germany,2,336256,555280,1,Sous-desservi
+germany,2,336256,572097,2,Sous-desservi
+germany,2,555280,130262,17,Desserte Normale
+germany,2,555280,336256,1,Sous-desservi
+germany,20,336267,55649,12,Desserte Normale
+germany,20,55649,336267,14,Desserte Normale
+germany,20,55649,631168,2,Sous-desservi
+germany,20,631168,55649,1,Sous-desservi
+germany,21,318149,332431,6,Sous-desservi
+germany,21,332431,318149,7,Desserte Normale
+germany,21,332431,406855,3,Sous-desservi
+germany,21,406855,332431,2,Sous-desservi
+germany,22,269522,455130,25,Desserte Normale
+germany,22,269522,577712,2,Sous-desservi
+germany,22,444457,455130,10,Desserte Normale
+germany,22,455130,269522,27,Desserte Normale
+germany,22,455130,444457,12,Desserte Normale
+germany,22,577712,269522,4,Sous-desservi
+germany,22,92856,577712,3,Sous-desservi
+germany,23,194067,624696,1,Sous-desservi
+germany,23,624696,304930,1,Sous-desservi
+germany,24,102204,142825,18,Desserte Normale
+germany,24,102204,587409,5,Sous-desservi
+germany,24,142825,102204,28,Desserte Normale
+germany,24,142825,200330,50,Desserte Normale
+germany,24,142825,344065,33,Desserte Normale
+germany,24,142825,438624,1,Sous-desservi
+germany,24,142825,580450,10,Desserte Normale
+germany,24,142825,603429,12,Desserte Normale
+germany,24,142825,663925,2,Sous-desservi
+germany,24,142825,683634,1,Sous-desservi
+germany,24,200330,142825,50,Desserte Normale
+germany,24,200330,587409,4,Sous-desservi
+germany,24,200330,603429,9,Desserte Normale
+germany,24,344065,142825,21,Desserte Normale
+germany,24,344065,587409,5,Sous-desservi
+germany,24,580450,142825,9,Desserte Normale
+germany,24,580450,587409,4,Sous-desservi
+germany,24,580450,603429,1,Sous-desservi
+germany,24,587409,142825,2,Sous-desservi
+germany,24,587409,200330,2,Sous-desservi
+germany,24,587409,283361,1,Sous-desservi
+germany,24,587409,344065,7,Desserte Normale
+germany,24,587409,580450,4,Sous-desservi
+germany,24,587409,603429,2,Sous-desservi
+germany,24,603429,142825,1,Sous-desservi
+germany,24,603429,200330,10,Desserte Normale
+germany,24,603429,580450,1,Sous-desservi
+germany,24,603429,587409,2,Sous-desservi
+germany,24,683634,142825,1,Sous-desservi
+germany,25,102204,603429,25,Desserte Normale
+germany,25,603429,102204,27,Desserte Normale
+germany,26,102204,585181,2,Sous-desservi
+germany,26,102204,614673,14,Desserte Normale
+germany,26,102204,73468,11,Desserte Normale
+germany,26,374309,102204,2,Sous-desservi
+germany,26,614673,102204,17,Desserte Normale
+germany,26,73468,102204,8,Desserte Normale
+germany,27,428565,614673,3,Sous-desservi
+germany,27,428565,73468,7,Desserte Normale
+germany,27,614673,428565,3,Sous-desservi
+germany,27,73468,428565,7,Desserte Normale
+germany,28,175986,616411,1,Sous-desservi
+germany,28,211512,321675,5,Sous-desservi
+germany,28,321675,211512,6,Sous-desservi
+germany,29,182870,169115,5,Sous-desservi
+germany,29,182870,269522,1,Sous-desservi
+germany,29,182870,358715,3,Sous-desservi
+germany,29,182870,642086,13,Desserte Normale
+germany,29,182870,668307,2,Sous-desservi
+germany,29,233043,107617,1,Sous-desservi
+germany,29,233043,411605,1,Sous-desservi
+germany,29,268858,354799,1,Sous-desservi
+germany,29,268858,411605,2,Sous-desservi
+germany,29,268858,529891,1,Sous-desservi
+germany,29,269522,182870,1,Sous-desservi
+germany,29,354799,411586,1,Sous-desservi
+germany,29,354799,642003,1,Sous-desservi
+germany,29,358715,182870,3,Sous-desservi
+germany,29,369695,182870,2,Sous-desservi
+germany,29,369695,294867,1,Sous-desservi
+germany,29,411586,233043,2,Sous-desservi
+germany,29,411586,411605,7,Desserte Normale
+germany,29,411586,529891,2,Sous-desservi
+germany,29,411586,82644,1,Sous-desservi
+germany,29,411605,27802,4,Sous-desservi
+germany,29,411605,411586,3,Sous-desservi
+germany,29,411605,642003,2,Sous-desservi
+germany,29,529891,27802,2,Sous-desservi
+germany,29,529891,411586,1,Sous-desservi
+germany,29,529891,642003,1,Sous-desservi
+germany,29,636760,169115,1,Sous-desservi
+germany,29,642003,27802,1,Sous-desservi
+germany,29,642086,182870,12,Desserte Normale
+germany,29,668307,182870,2,Sous-desservi
+germany,3,123823,362628,9,Desserte Normale
+germany,3,362628,123823,9,Desserte Normale
+germany,30,194067,484827,1,Sous-desservi
+germany,30,194067,502256,2,Sous-desservi
+germany,30,269978,502256,2,Sous-desservi
+germany,30,269978,603429,1,Sous-desservi
+germany,30,502256,194067,2,Sous-desservi
+germany,30,502256,304930,2,Sous-desservi
+germany,30,502256,38948,1,Sous-desservi
+germany,30,502256,628871,1,Sous-desservi
+germany,30,603429,304930,1,Sous-desservi
+germany,30,603429,38948,2,Sous-desservi
+germany,30,603429,628871,2,Sous-desservi
+germany,30,628871,484827,5,Sous-desservi
+germany,30,628871,502256,3,Sous-desservi
+germany,30,628871,603429,4,Sous-desservi
+germany,30,92798,194067,1,Sous-desservi
+germany,30,92798,38948,3,Sous-desservi
+germany,30,92798,628871,1,Sous-desservi
+germany,31,102204,262794,4,Sous-desservi
+germany,31,102204,603429,4,Sous-desservi
+germany,31,102204,614673,3,Sous-desservi
+germany,31,102204,73468,1,Sous-desservi
+germany,31,262794,102204,4,Sous-desservi
+germany,31,603429,102204,4,Sous-desservi
+germany,31,614673,102204,3,Sous-desservi
+germany,31,73468,102204,1,Sous-desservi
+germany,32,394749,43717,6,Sous-desservi
+germany,32,43717,394749,4,Sous-desservi
+germany,33,130262,624696,1,Sous-desservi
+germany,33,624696,130262,2,Sous-desservi
+germany,33,624696,672160,2,Sous-desservi
+germany,33,672160,624696,1,Sous-desservi
+germany,34,165169,455249,2,Sous-desservi
+germany,34,394749,455249,3,Sous-desservi
+germany,34,419137,445631,1,Sous-desservi
+germany,34,419137,508877,4,Sous-desservi
+germany,34,455249,165169,1,Sous-desservi
+germany,34,455249,394749,3,Sous-desservi
+germany,34,508877,419137,3,Sous-desservi
+germany,34,508877,508910,2,Sous-desservi
+germany,34,508910,508877,1,Sous-desservi
+germany,35,142825,419137,2,Sous-desservi
+germany,35,419137,142825,2,Sous-desservi
+germany,36,198435,508910,1,Sous-desservi
+germany,36,508910,198435,2,Sous-desservi
+germany,37,130550,642086,5,Sous-desservi
+germany,37,642086,130550,6,Sous-desservi
+germany,38,211512,603429,6,Sous-desservi
+germany,38,211512,614673,1,Sous-desservi
+germany,38,603429,211512,8,Desserte Normale
+germany,38,614673,211512,2,Sous-desservi
+germany,39,419137,274407,6,Sous-desservi
+germany,4,130550,388360,6,Sous-desservi
+germany,4,15960,362628,5,Sous-desservi
+germany,4,318149,362628,4,Sous-desservi
+germany,4,318149,388360,2,Sous-desservi
+germany,4,362628,15960,3,Sous-desservi
+germany,4,362628,318149,5,Sous-desservi
+germany,4,388360,130550,5,Sous-desservi
+germany,4,388360,679685,6,Sous-desservi
+germany,4,406855,388360,4,Sous-desservi
+germany,4,679685,318149,8,Desserte Normale
+germany,4,679685,406855,5,Sous-desservi
+germany,4,679685,74368,4,Sous-desservi
+germany,4,74368,679685,7,Desserte Normale
+germany,40,480118,580450,3,Sous-desservi
+germany,40,580450,480118,3,Sous-desservi
+germany,41,105119,321675,17,Desserte Normale
+germany,41,255962,321675,22,Desserte Normale
+germany,41,321675,105119,21,Desserte Normale
+germany,41,321675,255962,19,Desserte Normale
+germany,41,321675,266618,1,Sous-desservi
+germany,41,321675,539034,30,Desserte Normale
+germany,41,321675,620409,14,Desserte Normale
+germany,41,321675,657133,6,Sous-desservi
+germany,41,539034,321675,36,Desserte Normale
+germany,41,620409,321675,22,Desserte Normale
+germany,41,657133,321675,6,Sous-desservi
+germany,42,142825,194067,52,Desserte Normale
+germany,42,142825,269978,2,Sous-desservi
+germany,42,142825,302694,3,Sous-desservi
+germany,42,142825,492286,4,Sous-desservi
+germany,42,142825,555880,2,Sous-desservi
+germany,42,142825,590741,3,Sous-desservi
+germany,42,142825,603429,15,Desserte Normale
+germany,42,142825,612763,2,Sous-desservi
+germany,42,142825,6325,10,Desserte Normale
+germany,42,142825,642086,14,Desserte Normale
+germany,42,194067,142825,4,Sous-desservi
+germany,42,194067,603429,1,Sous-desservi
+germany,42,194067,73468,9,Desserte Normale
+germany,42,216545,142825,47,Desserte Normale
+germany,42,216545,603429,5,Sous-desservi
+germany,42,23599,142825,18,Desserte Normale
+germany,42,481327,142825,6,Sous-desservi
+germany,42,492286,142825,7,Desserte Normale
+germany,42,557395,142825,2,Sous-desservi
+germany,42,603429,194067,4,Sous-desservi
+germany,42,603429,555880,1,Sous-desservi
+germany,42,73468,194067,7,Desserte Normale
+germany,42,73468,590741,1,Sous-desservi
+germany,43,130262,672160,5,Sous-desservi
+germany,43,336267,672160,2,Sous-desservi
+germany,43,672160,130262,5,Sous-desservi
+germany,43,672160,44416,2,Sous-desservi
+germany,44,106344,419137,2,Sous-desservi
+germany,44,419137,106344,3,Sous-desservi
+germany,44,419137,604757,3,Sous-desservi
+germany,44,592990,419137,2,Sous-desservi
+germany,45,616411,175986,1,Sous-desservi
+germany,46,142825,182870,2,Sous-desservi
+germany,46,182870,142825,2,Sous-desservi
+germany,46,182870,431935,2,Sous-desservi
+germany,46,182870,464710,1,Sous-desservi
+germany,46,382174,555280,2,Sous-desservi
+germany,46,431935,182870,4,Sous-desservi
+germany,46,555280,382174,3,Sous-desservi
+germany,47,165169,455249,3,Sous-desservi
+germany,47,455249,165169,3,Sous-desservi
+germany,48,198435,419137,2,Sous-desservi
+germany,48,334608,410828,11,Desserte Normale
+germany,48,34644,106344,1,Sous-desservi
+germany,48,410828,334608,16,Desserte Normale
+germany,48,419137,198435,1,Sous-desservi
+germany,48,604757,34644,3,Sous-desservi
+germany,49,394870,638200,3,Sous-desservi
+germany,49,419137,638200,2,Sous-desservi
+germany,49,638200,394870,3,Sous-desservi
+germany,49,638200,419137,3,Sous-desservi
+germany,5,614673,73468,2,Sous-desservi
+germany,5,73468,614673,2,Sous-desservi
+germany,50,334608,427937,31,Desserte Normale
+germany,50,427937,334608,27,Desserte Normale
+germany,51,15960,638200,6,Sous-desservi
+germany,51,318149,638200,5,Sous-desservi
+germany,51,638200,15960,4,Sous-desservi
+germany,51,638200,318149,6,Sous-desservi
+germany,52,121886,255962,58,Bien desservi
+germany,52,255962,121886,58,Bien desservi
+germany,53,344065,587409,30,Desserte Normale
+germany,53,587409,344065,20,Desserte Normale
+germany,54,142825,194067,68,Bien desservi
+germany,54,142825,216545,4,Sous-desservi
+germany,54,142825,269978,1,Sous-desservi
+germany,54,142825,390636,8,Desserte Normale
+germany,54,142825,590741,8,Desserte Normale
+germany,54,142825,628871,3,Sous-desservi
+germany,54,194067,142825,6,Sous-desservi
+germany,54,216545,142825,55,Desserte Normale
+germany,54,23599,142825,14,Desserte Normale
+germany,55,177507,455130,4,Sous-desservi
+germany,55,201052,624696,1,Sous-desservi
+germany,55,382174,555280,2,Sous-desservi
+germany,55,455130,624696,2,Sous-desservi
+germany,55,555280,382174,3,Sous-desservi
+germany,55,577712,555280,1,Sous-desservi
+germany,55,577712,624696,7,Desserte Normale
+germany,55,624696,201052,3,Sous-desservi
+germany,55,624696,577712,7,Desserte Normale
+germany,56,194067,428565,1,Sous-desservi
+germany,56,335930,428565,5,Sous-desservi
+germany,56,335930,603429,6,Sous-desservi
+germany,56,428565,194067,11,Desserte Normale
+germany,56,428565,603429,8,Desserte Normale
+germany,56,524320,603429,19,Desserte Normale
+germany,56,603429,335930,3,Sous-desservi
+germany,56,603429,428565,13,Desserte Normale
+germany,56,603429,484827,19,Desserte Normale
+germany,56,614673,428565,2,Sous-desservi
+germany,56,614673,603429,5,Sous-desservi
+germany,56,96208,428565,9,Desserte Normale
+germany,57,123823,638200,2,Sous-desservi
+germany,57,419137,592990,2,Sous-desservi
+germany,57,419137,631452,3,Sous-desservi
+germany,57,431935,660442,4,Sous-desservi
+germany,57,638200,123823,2,Sous-desservi
+germany,57,638200,419137,5,Sous-desservi
+germany,57,660442,431935,4,Sous-desservi
+germany,58,14207,148471,1,Sous-desservi
+germany,58,14207,436407,2,Sous-desservi
+germany,58,255962,321675,17,Desserte Normale
+germany,58,321675,255962,8,Desserte Normale
+germany,58,436407,14207,4,Sous-desservi
+germany,59,102204,169115,7,Desserte Normale
+germany,59,102204,194067,2,Sous-desservi
+germany,59,102204,304930,6,Sous-desservi
+germany,59,102204,368909,2,Sous-desservi
+germany,59,175060,102204,2,Sous-desservi
+germany,59,194067,102204,2,Sous-desservi
+germany,59,304930,102204,11,Desserte Normale
+germany,59,304930,580450,1,Sous-desservi
+germany,59,304930,98749,6,Sous-desservi
+germany,59,368909,102204,1,Sous-desservi
+germany,59,368909,98749,3,Sous-desservi
+germany,59,369695,102204,3,Sous-desservi
+germany,59,98749,304930,4,Sous-desservi
+germany,59,98749,368909,2,Sous-desservi
+germany,6,121886,186619,14,Desserte Normale
+germany,6,121886,216112,11,Desserte Normale
+germany,6,121886,323976,1,Sous-desservi
+germany,6,121886,416511,5,Sous-desservi
+germany,6,121886,421858,1,Sous-desservi
+germany,6,121886,73468,24,Desserte Normale
+germany,6,186619,121886,9,Desserte Normale
+germany,6,186619,262794,1,Sous-desservi
+germany,6,186619,416511,3,Sous-desservi
+germany,6,186619,73468,1,Sous-desservi
+germany,6,209548,73468,2,Sous-desservi
+germany,6,216112,121886,7,Desserte Normale
+germany,6,216112,209548,3,Sous-desservi
+germany,6,216112,416511,1,Sous-desservi
+germany,6,262794,186619,1,Sous-desservi
+germany,6,262794,216112,1,Sous-desservi
+germany,6,262794,73468,4,Sous-desservi
+germany,6,323976,262794,1,Sous-desservi
+germany,6,416511,121886,11,Desserte Normale
+germany,6,416511,73468,2,Sous-desservi
+germany,6,421858,262794,1,Sous-desservi
+germany,6,73468,121886,14,Desserte Normale
+germany,6,73468,186619,1,Sous-desservi
+germany,6,73468,262794,2,Sous-desservi
+germany,6,73468,416511,9,Desserte Normale
+germany,60,390636,624696,1,Sous-desservi
+germany,60,405142,555280,1,Sous-desservi
+germany,60,555280,313463,1,Sous-desservi
+germany,60,590741,555280,1,Sous-desservi
+germany,60,624696,169115,2,Sous-desservi
+germany,60,624696,304930,6,Sous-desservi
+germany,60,624696,313463,1,Sous-desservi
+germany,60,624696,390636,2,Sous-desservi
+germany,60,624696,628871,3,Sous-desservi
+germany,60,628871,555280,2,Sous-desservi
+germany,60,6325,555280,1,Sous-desservi
+germany,60,6325,624696,6,Sous-desservi
+germany,61,255962,321675,1,Sous-desservi
+germany,61,255962,410828,24,Desserte Normale
+germany,61,321675,255962,3,Sous-desservi
+germany,61,410828,255962,21,Desserte Normale
+germany,62,15960,332431,16,Desserte Normale
+germany,62,318149,332431,3,Sous-desservi
+germany,62,332431,15960,18,Desserte Normale
+germany,62,332431,318149,4,Sous-desservi
+germany,62,332431,34752,2,Sous-desservi
+germany,62,34752,332431,2,Sous-desservi
+germany,63,255962,321675,3,Sous-desservi
+germany,63,274407,604757,3,Sous-desservi
+germany,63,321675,255962,1,Sous-desservi
+germany,63,394749,43717,3,Sous-desservi
+germany,63,419137,274407,2,Sous-desservi
+germany,63,43717,394749,3,Sous-desservi
+germany,64,321675,657133,2,Sous-desservi
+germany,64,657133,321675,4,Sous-desservi
+germany,65,152212,419137,17,Desserte Normale
+germany,65,249690,431935,2,Sous-desservi
+germany,65,334608,660442,2,Sous-desservi
+germany,65,356394,638200,17,Desserte Normale
+germany,65,419137,152212,21,Desserte Normale
+germany,65,419137,638200,2,Sous-desservi
+germany,65,431935,249690,3,Sous-desservi
+germany,65,431935,660442,3,Sous-desservi
+germany,65,638200,356394,20,Desserte Normale
+germany,65,638200,419137,2,Sous-desservi
+germany,65,660442,334608,2,Sous-desservi
+germany,65,660442,431935,2,Sous-desservi
+germany,66,148532,152974,2,Sous-desservi
+germany,66,148532,194067,1,Sous-desservi
+germany,66,18511,148532,2,Sous-desservi
+germany,66,194067,499475,1,Sous-desservi
+germany,66,23599,455130,2,Sous-desservi
+germany,66,23599,499475,2,Sous-desservi
+germany,66,455130,152974,2,Sous-desservi
+germany,66,455130,313463,1,Sous-desservi
+germany,66,499475,194067,1,Sous-desservi
+germany,66,499475,313463,1,Sous-desservi
+germany,66,499475,96208,2,Sous-desservi
+germany,67,269522,481327,28,Desserte Normale
+germany,67,269522,559382,4,Sous-desservi
+germany,67,269522,603429,21,Desserte Normale
+germany,67,481327,269522,35,Desserte Normale
+germany,67,481327,642086,8,Desserte Normale
+germany,67,603429,269522,17,Desserte Normale
+germany,67,603429,642086,5,Sous-desservi
+germany,67,642086,269522,3,Sous-desservi
+germany,67,642086,481327,6,Sous-desservi
+germany,67,642086,603429,2,Sous-desservi
+germany,68,142825,559382,6,Sous-desservi
+germany,68,142825,603429,18,Desserte Normale
+germany,68,142825,73468,2,Sous-desservi
+germany,68,334608,344065,2,Sous-desservi
+germany,68,344065,334608,2,Sous-desservi
+germany,68,344065,73468,6,Sous-desservi
+germany,68,374309,603429,1,Sous-desservi
+germany,68,416549,559382,2,Sous-desservi
+germany,68,416549,73468,1,Sous-desservi
+germany,68,419137,559169,8,Desserte Normale
+germany,68,419137,603429,16,Desserte Normale
+germany,68,524320,142825,7,Desserte Normale
+germany,68,524320,416549,4,Sous-desservi
+germany,68,559169,419137,12,Desserte Normale
+germany,68,585181,603429,1,Sous-desservi
+germany,68,603429,142825,21,Desserte Normale
+germany,68,603429,419137,15,Desserte Normale
+germany,68,603429,73468,23,Desserte Normale
+germany,68,73468,142825,2,Sous-desservi
+germany,68,73468,344065,7,Desserte Normale
+germany,68,73468,416549,2,Sous-desservi
+germany,68,73468,603429,24,Desserte Normale
+germany,69,194067,332431,3,Sous-desservi
+germany,69,328823,332431,3,Sous-desservi
+germany,69,332431,194067,3,Sous-desservi
+germany,69,332431,35733,2,Sous-desservi
+germany,69,332431,424235,3,Sous-desservi
+germany,69,349951,332431,2,Sous-desservi
+germany,7,142825,394870,1,Sous-desservi
+germany,7,142825,419137,1,Sous-desservi
+germany,7,394870,464710,3,Sous-desservi
+germany,7,419137,464710,3,Sous-desservi
+germany,7,464710,394870,2,Sous-desservi
+germany,7,464710,419137,1,Sous-desservi
+germany,70,102204,169115,59,Bien desservi
+germany,70,102204,175060,4,Sous-desservi
+germany,70,102204,268175,1,Sous-desservi
+germany,70,102204,283621,8,Desserte Normale
+germany,70,102204,313463,16,Desserte Normale
+germany,70,102204,390636,3,Sous-desservi
+germany,70,102204,569485,1,Sous-desservi
+germany,70,102204,590741,3,Sous-desservi
+germany,70,102204,617526,1,Sous-desservi
+germany,70,175060,102204,2,Sous-desservi
+germany,70,182870,169115,6,Sous-desservi
+germany,70,182870,313463,1,Sous-desservi
+germany,70,182870,38948,2,Sous-desservi
+germany,70,269978,102204,1,Sous-desservi
+germany,70,283621,102204,6,Sous-desservi
+germany,70,302694,102204,3,Sous-desservi
+germany,70,369695,102204,69,Bien desservi
+germany,70,369695,182870,7,Desserte Normale
+germany,70,369695,200330,1,Sous-desservi
+germany,70,369695,580450,2,Sous-desservi
+germany,70,403272,102204,3,Sous-desservi
+germany,70,403272,182870,2,Sous-desservi
+germany,70,403272,580450,2,Sous-desservi
+germany,70,628871,102204,1,Sous-desservi
+germany,70,6325,102204,17,Desserte Normale
+germany,70,6325,182870,2,Sous-desservi
+germany,71,182870,394907,1,Sous-desservi
+germany,71,182870,555280,3,Sous-desservi
+germany,71,394907,73468,1,Sous-desservi
+germany,71,555280,182870,3,Sous-desservi
+germany,71,555280,73468,19,Desserte Normale
+germany,71,603429,664916,8,Desserte Normale
+germany,71,603429,73468,5,Sous-desservi
+germany,71,664916,603429,6,Sous-desservi
+germany,71,664916,73468,37,Desserte Normale
+germany,71,73468,394907,3,Sous-desservi
+germany,71,73468,555280,32,Desserte Normale
+germany,71,73468,664916,26,Desserte Normale
+germany,72,182870,603429,24,Desserte Normale
+germany,72,182870,614673,22,Desserte Normale
+germany,72,603429,182870,23,Desserte Normale
+germany,72,614673,182870,19,Desserte Normale
+germany,73,142825,194067,1,Sous-desservi
+germany,73,142825,269978,8,Desserte Normale
+germany,73,142825,624696,17,Desserte Normale
+germany,73,142825,642086,6,Sous-desservi
+germany,73,142825,664916,3,Sous-desservi
+germany,73,194067,142825,1,Sous-desservi
+germany,73,216545,142825,2,Sous-desservi
+germany,73,302694,555280,4,Sous-desservi
+germany,73,492286,624696,3,Sous-desservi
+germany,73,587409,624696,3,Sous-desservi
+germany,73,590741,555280,1,Sous-desservi
+germany,73,624696,142825,20,Desserte Normale
+germany,73,624696,313463,3,Sous-desservi
+germany,73,624696,390636,5,Sous-desservi
+germany,73,624696,492286,8,Desserte Normale
+germany,73,624696,587409,7,Desserte Normale
+germany,73,628871,624696,1,Sous-desservi
+germany,73,642086,142825,3,Sous-desservi
+germany,73,642086,624696,4,Sous-desservi
+germany,73,664916,142825,4,Sous-desservi
+germany,74,102204,142825,8,Desserte Normale
+germany,74,102204,394907,1,Sous-desservi
+germany,74,102204,624696,8,Desserte Normale
+germany,74,142825,102204,13,Desserte Normale
+germany,74,142825,283361,1,Sous-desservi
+germany,74,142825,394907,4,Sous-desservi
+germany,74,142825,555280,9,Desserte Normale
+germany,74,142825,559169,18,Desserte Normale
+germany,74,142825,624696,58,Bien desservi
+germany,74,142825,683634,1,Sous-desservi
+germany,74,177507,142825,19,Desserte Normale
+germany,74,394907,142825,4,Sous-desservi
+germany,74,394907,73468,1,Sous-desservi
+germany,74,555280,142825,4,Sous-desservi
+germany,74,555280,73468,1,Sous-desservi
+germany,74,559169,142825,8,Desserte Normale
+germany,74,603429,394907,1,Sous-desservi
+germany,74,603429,624696,21,Desserte Normale
+germany,74,624696,142825,55,Desserte Normale
+germany,74,624696,603429,21,Desserte Normale
+germany,74,624696,73468,10,Desserte Normale
+germany,74,73468,394907,1,Sous-desservi
+germany,74,73468,624696,6,Sous-desservi
+germany,75,102204,142825,6,Sous-desservi
+germany,75,142825,102204,11,Desserte Normale
+germany,75,142825,283361,1,Sous-desservi
+germany,75,142825,344065,49,Desserte Normale
+germany,75,142825,436407,8,Desserte Normale
+germany,75,142825,658035,1,Sous-desservi
+germany,75,142825,683634,1,Sous-desservi
+germany,75,234276,142825,1,Sous-desservi
+germany,75,344065,142825,55,Desserte Normale
+germany,75,436407,142825,8,Desserte Normale
+germany,75,683634,142825,1,Sous-desservi
+germany,76,102204,356394,11,Desserte Normale
+germany,76,102204,587409,19,Desserte Normale
+germany,76,142825,356394,5,Sous-desservi
+germany,76,304930,431935,3,Sous-desservi
+germany,76,304930,587409,2,Sous-desservi
+germany,76,344065,356394,4,Sous-desservi
+germany,76,344065,587409,2,Sous-desservi
+germany,76,356394,102204,19,Desserte Normale
+germany,76,356394,142825,5,Sous-desservi
+germany,76,356394,344065,21,Desserte Normale
+germany,76,356394,603429,2,Sous-desservi
+germany,76,431935,194067,3,Sous-desservi
+germany,76,431935,624696,1,Sous-desservi
+germany,76,587409,102204,32,Desserte Normale
+germany,76,587409,194067,2,Sous-desservi
+germany,76,587409,344065,2,Sous-desservi
+germany,76,587409,624696,1,Sous-desservi
+germany,76,603429,102204,1,Sous-desservi
+germany,76,603429,587409,2,Sous-desservi
+germany,76,624696,431935,1,Sous-desservi
+germany,76,624696,587409,1,Sous-desservi
+germany,77,142825,419137,8,Desserte Normale
+germany,77,419137,142825,6,Sous-desservi
+germany,78,142825,323996,1,Sous-desservi
+germany,78,142825,448884,4,Sous-desservi
+germany,78,323996,142825,1,Sous-desservi
+germany,78,448884,142825,3,Sous-desservi
+germany,79,130262,55649,1,Sous-desservi
+germany,79,130262,672160,26,Desserte Normale
+germany,79,55649,130262,1,Sous-desservi
+germany,79,672160,130262,20,Desserte Normale
+germany,8,102204,107617,5,Sous-desservi
+germany,8,102204,411605,7,Desserte Normale
+germany,8,102204,529891,4,Sous-desservi
+germany,8,107617,102204,5,Sous-desservi
+germany,8,132383,529891,3,Sous-desservi
+germany,8,411605,102204,4,Sous-desservi
+germany,8,411605,480118,3,Sous-desservi
+germany,8,480118,411605,3,Sous-desservi
+germany,8,480118,529891,3,Sous-desservi
+germany,8,529891,102204,7,Desserte Normale
+germany,8,529891,480118,3,Sous-desservi
+germany,8,529891,580450,1,Sous-desservi
+germany,80,255962,266618,6,Sous-desservi
+germany,81,587409,614673,16,Desserte Normale
+germany,81,587409,73468,25,Desserte Normale
+germany,81,614673,587409,15,Desserte Normale
+germany,81,614673,642086,6,Sous-desservi
+germany,81,614673,73468,1,Sous-desservi
+germany,81,642086,614673,7,Desserte Normale
+germany,81,642086,73468,2,Sous-desservi
+germany,81,73468,587409,23,Desserte Normale
+germany,81,73468,614673,1,Sous-desservi
+germany,81,73468,642086,3,Sous-desservi
+germany,82,175060,283361,2,Sous-desservi
+germany,82,175060,614673,3,Sous-desservi
+germany,82,283361,175060,5,Sous-desservi
+germany,82,283361,283621,2,Sous-desservi
+germany,82,283361,499475,3,Sous-desservi
+germany,82,362772,612763,1,Sous-desservi
+germany,82,369695,603429,2,Sous-desservi
+germany,82,369695,612763,2,Sous-desservi
+germany,82,369695,614673,4,Sous-desservi
+germany,82,369695,73468,3,Sous-desservi
+germany,82,390636,603429,2,Sous-desservi
+germany,82,557395,283361,1,Sous-desservi
+germany,82,557395,603429,1,Sous-desservi
+germany,82,603429,283621,1,Sous-desservi
+germany,82,603429,390636,3,Sous-desservi
+germany,82,603429,499475,1,Sous-desservi
+germany,82,612763,175060,2,Sous-desservi
+germany,82,612763,368909,1,Sous-desservi
+germany,82,612763,614673,4,Sous-desservi
+germany,82,614673,175060,8,Desserte Normale
+germany,82,614673,557395,6,Sous-desservi
+germany,82,614673,612763,1,Sous-desservi
+germany,82,73468,169115,4,Sous-desservi
+germany,83,182870,321675,2,Sous-desservi
+germany,83,182870,502256,2,Sous-desservi
+germany,83,182870,603429,2,Sous-desservi
+germany,83,321675,555280,28,Desserte Normale
+germany,83,321675,603429,7,Desserte Normale
+germany,83,321675,614673,1,Sous-desservi
+germany,83,394907,481327,4,Sous-desservi
+germany,83,394907,614673,3,Sous-desservi
+germany,83,481327,394907,3,Sous-desservi
+germany,83,481327,555280,6,Sous-desservi
+germany,83,555280,211512,1,Sous-desservi
+germany,83,555280,283361,1,Sous-desservi
+germany,83,555280,321675,33,Desserte Normale
+germany,83,555280,481327,11,Desserte Normale
+germany,83,555280,603429,1,Sous-desservi
+germany,83,555280,612763,1,Sous-desservi
+germany,83,555280,614673,19,Desserte Normale
+germany,83,603429,555280,1,Sous-desservi
+germany,83,614673,394907,4,Sous-desservi
+germany,83,614673,555280,11,Desserte Normale
+germany,83,614673,603429,1,Sous-desservi
+germany,83,614673,624696,1,Sous-desservi
+germany,83,619377,555280,1,Sous-desservi
+germany,84,142825,182870,9,Desserte Normale
+germany,84,142825,394907,13,Desserte Normale
+germany,84,142825,455130,1,Sous-desservi
+germany,84,142825,555280,89,Bien desservi
+germany,84,142825,587409,3,Sous-desservi
+germany,84,177507,142825,77,Bien desservi
+germany,84,177507,587409,4,Sous-desservi
+germany,84,182870,142825,5,Sous-desservi
+germany,84,394907,142825,8,Desserte Normale
+germany,84,455130,142825,1,Sous-desservi
+germany,84,543117,142825,2,Sous-desservi
+germany,84,555280,142825,20,Desserte Normale
+germany,84,587409,142825,2,Sous-desservi
+germany,85,102204,394907,2,Sous-desservi
+germany,85,102204,624696,6,Sous-desservi
+germany,85,177507,102204,9,Desserte Normale
+germany,85,177507,580450,1,Sous-desservi
+germany,85,321675,102204,7,Desserte Normale
+germany,85,321675,344065,17,Desserte Normale
+germany,85,321675,394907,5,Sous-desservi
+germany,85,321675,555280,7,Desserte Normale
+germany,85,321675,580450,1,Sous-desservi
+germany,85,321675,624696,31,Desserte Normale
+germany,85,344065,321675,8,Desserte Normale
+germany,85,394907,321675,2,Sous-desservi
+germany,85,394907,614673,1,Sous-desservi
+germany,85,555280,321675,1,Sous-desservi
+germany,85,555280,614673,2,Sous-desservi
+germany,85,614673,394907,1,Sous-desservi
+germany,85,614673,624696,7,Desserte Normale
+germany,85,619377,394907,1,Sous-desservi
+germany,85,619377,555280,1,Sous-desservi
+germany,85,619377,624696,1,Sous-desservi
+germany,85,624696,102204,18,Desserte Normale
+germany,85,624696,321675,41,Desserte Normale
+germany,85,624696,580450,1,Sous-desservi
+germany,85,624696,614673,14,Desserte Normale
+germany,85,624696,619377,5,Sous-desservi
+germany,86,216545,73468,4,Sous-desservi
+germany,86,73468,18511,3,Sous-desservi
+germany,87,321675,182870,2,Sous-desservi
+germany,87,321675,394907,2,Sous-desservi
+germany,87,321675,555280,13,Desserte Normale
+germany,87,394907,321675,2,Sous-desservi
+germany,87,555280,321675,13,Desserte Normale
+germany,87,555280,614673,2,Sous-desservi
+germany,88,123823,638200,3,Sous-desservi
+germany,88,638200,123823,3,Sous-desservi
+germany,89,620403,628190,8,Desserte Normale
+germany,89,628190,620403,8,Desserte Normale
+germany,9,142825,18511,11,Desserte Normale
+germany,9,142825,194067,19,Desserte Normale
+germany,9,142825,405142,5,Sous-desservi
+germany,9,142825,555880,1,Sous-desservi
+germany,9,142825,587409,5,Sous-desservi
+germany,9,142825,590741,2,Sous-desservi
+germany,9,142825,624696,5,Sous-desservi
+germany,9,142825,642086,3,Sous-desservi
+germany,9,142825,668554,1,Sous-desservi
+germany,9,194067,142825,2,Sous-desservi
+germany,9,194067,382174,1,Sous-desservi
+germany,9,194067,587409,1,Sous-desservi
+germany,9,216545,142825,17,Desserte Normale
+germany,9,23599,142825,4,Sous-desservi
+germany,9,302694,624696,1,Sous-desservi
+germany,9,304930,142825,9,Desserte Normale
+germany,9,382174,194067,1,Sous-desservi
+germany,9,390636,142825,1,Sous-desservi
+germany,9,492286,194067,3,Sous-desservi
+germany,9,587409,142825,5,Sous-desservi
+germany,9,587409,405142,2,Sous-desservi
+germany,9,587409,624696,1,Sous-desservi
+germany,9,624696,142825,4,Sous-desservi
+germany,9,624696,38948,2,Sous-desservi
+germany,9,642086,194067,1,Sous-desservi
+germany,9,642086,302694,1,Sous-desservi
+germany,9,96208,587409,4,Sous-desservi
+germany,90,194067,577712,1,Sous-desservi
+germany,90,194067,603429,2,Sous-desservi
+germany,90,302694,499475,1,Sous-desservi
+germany,90,302694,577712,3,Sous-desservi
+germany,90,499475,313463,1,Sous-desservi
+germany,90,499475,559382,2,Sous-desservi
+germany,90,499475,584499,1,Sous-desservi
+germany,90,499475,603429,9,Desserte Normale
+germany,90,523506,313463,1,Sous-desservi
+germany,90,523506,584499,2,Sous-desservi
+germany,90,523506,603429,3,Sous-desservi
+germany,90,524320,269522,2,Sous-desservi
+germany,90,524320,499475,2,Sous-desservi
+germany,90,524320,577712,4,Sous-desservi
+germany,90,524320,603429,1,Sous-desservi
+germany,90,555880,523506,1,Sous-desservi
+germany,90,555880,577712,1,Sous-desservi
+germany,90,567773,499475,2,Sous-desservi
+germany,90,567773,577712,4,Sous-desservi
+germany,90,577712,194067,1,Sous-desservi
+germany,90,577712,301704,1,Sous-desservi
+germany,90,577712,313463,2,Sous-desservi
+germany,90,577712,559382,6,Sous-desservi
+germany,90,577712,584499,7,Desserte Normale
+germany,90,577712,603429,22,Desserte Normale
+germany,90,584499,499475,1,Sous-desservi
+germany,90,584499,523506,1,Sous-desservi
+germany,90,584499,577712,4,Sous-desservi
+germany,90,603429,194067,7,Desserte Normale
+germany,90,603429,269978,6,Sous-desservi
+germany,90,603429,302694,1,Sous-desservi
+germany,90,603429,499475,7,Desserte Normale
+germany,90,603429,523506,1,Sous-desservi
+germany,90,603429,555880,1,Sous-desservi
+germany,90,603429,577712,17,Desserte Normale
+germany,90,628871,499475,1,Sous-desservi
+germany,90,628871,523506,2,Sous-desservi
+germany,90,628871,577712,1,Sous-desservi
+germany,90,96208,603429,6,Sous-desservi
+germany,91,165169,123823,1,Sous-desservi
+germany,92,123823,165169,2,Sous-desservi
+germany,93,102204,374309,3,Sous-desservi
+germany,93,102204,585181,4,Sous-desservi
+germany,93,102204,603429,14,Desserte Normale
+germany,93,102204,614673,8,Desserte Normale
+germany,93,102204,73468,6,Sous-desservi
+germany,93,182870,269522,3,Sous-desservi
+germany,93,182870,344065,1,Sous-desservi
+germany,93,190668,269522,1,Sous-desservi
+germany,93,190668,344065,1,Sous-desservi
+germany,93,266114,344065,10,Desserte Normale
+germany,93,269522,182870,4,Sous-desservi
+germany,93,269522,344065,25,Desserte Normale
+germany,93,269522,642086,2,Sous-desservi
+germany,93,294867,344065,1,Sous-desservi
+germany,93,330754,344065,1,Sous-desservi
+germany,93,344065,182870,6,Sous-desservi
+germany,93,344065,190668,1,Sous-desservi
+germany,93,344065,266114,10,Desserte Normale
+germany,93,344065,269522,19,Desserte Normale
+germany,93,344065,330754,1,Sous-desservi
+germany,93,344065,642086,1,Sous-desservi
+germany,93,374309,102204,1,Sous-desservi
+germany,93,585181,102204,4,Sous-desservi
+germany,93,603429,102204,8,Desserte Normale
+germany,93,614673,102204,13,Desserte Normale
+germany,93,636760,269522,3,Sous-desservi
+germany,93,642086,269522,2,Sous-desservi
+germany,93,642086,344065,3,Sous-desservi
+germany,93,73468,102204,13,Desserte Normale
+germany,94,182870,502256,6,Sous-desservi
+germany,94,182870,603429,2,Sous-desservi
+germany,94,502256,182870,5,Sous-desservi
+germany,94,603429,182870,6,Sous-desservi
+germany,94,603429,38948,3,Sous-desservi
+germany,94,628871,603429,3,Sous-desservi
+germany,95,182870,545116,3,Sous-desservi
+germany,95,369695,545116,15,Desserte Normale
+germany,95,369695,559169,4,Sous-desservi
+germany,95,545116,169115,13,Desserte Normale
+germany,95,545116,182870,3,Sous-desservi
+germany,95,545116,268175,5,Sous-desservi
+germany,95,545116,590741,1,Sous-desservi
+germany,95,559169,169115,2,Sous-desservi
+germany,95,559169,268175,1,Sous-desservi
+germany,95,628871,545116,6,Sous-desservi
+germany,95,628871,559169,2,Sous-desservi
+germany,96,165169,394749,2,Sous-desservi
