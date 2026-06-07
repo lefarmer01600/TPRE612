@@ -26,7 +26,7 @@ Fonctionnalités
 - Recherche de gares par ville, pays
 - Statistiques : émissions CO2, fréquentation, performance
 - Compatible Grafana (JSON datasource)
-- **ML** : classification et clustering des dessertes ferroviaires
+- **ML** : classification des dessertes ferroviaires
     """,
     version="1.0.0",
     root_path="/api",
@@ -37,7 +37,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["GET", "POST"],  # POST required for /ml/* routes
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
 

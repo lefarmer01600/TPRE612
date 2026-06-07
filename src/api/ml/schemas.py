@@ -47,35 +47,6 @@ class ClassificationResult(BaseModel):
     }
 
 
-class ClusterProfile(BaseModel):
-    """Descriptive profile attached to a KMeans cluster."""
-    size:                int
-    weekly_train_mean:   float
-    weekly_train_median: float
-    weekly_train_std:    float
-    desserte_type_dist:  dict[str, float]
-
-    model_config = {"from_attributes": True}
-
-
-class ClusteringResult(BaseModel):
-    """Result of the KMeans clustering."""
-    cluster_id:      int
-    cluster_profile: Optional[ClusterProfile]
-    model_used:      str = Field(...)
-
-    model_config = {
-        "from_attributes": True,
-        "json_schema_extra": {
-            "example": {
-                "cluster_id":      1,
-                "cluster_profile": None,
-                "model_used":      "KMeans",
-            }
-        },
-    }
-
-
 class RetrainResponse(BaseModel):
     """Returned immediately when a background retrain is triggered."""
     status:  str = Field(...)
