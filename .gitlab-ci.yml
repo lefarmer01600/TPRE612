@@ -78,6 +78,10 @@ deploy_staging:
         --name tpre612 \
         --env-file /opt/tpre612/.env \
         --add-host host.docker.internal:host-gateway \
+        --network grafana_grafana-net \
+        --log-driver loki \
+        --log-opt loki-url="http://localhost:3100/loki/api/v1/push" \
+        --log-opt loki-external-labels="container=tpre612" \
         -v /opt/tpre612/data/output:/app/data/output \
         -p 8000:8000 \
         $CI_REGISTRY_IMAGE:latest
