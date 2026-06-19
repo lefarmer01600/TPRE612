@@ -10,6 +10,7 @@ from src.api.routers import trajets, gares, trains, operateurs, routes, stats
 from src.api.routers import ml
 from src.api.ml import models as ml_models
 from src.api.auth import verify_token          # ← new
+from src.api.error_handlers import register_error_handlers
 from src.api.logging_config import setup_logging
 
 
@@ -33,6 +34,8 @@ endpoints protégés par authentification via le bouton Authorize.
     root_path="/api",
     lifespan=lifespan,
 )
+
+register_error_handlers(app)
 
 
 @app.middleware("http")
