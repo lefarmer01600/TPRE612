@@ -2,12 +2,11 @@ import pytest
 from fastapi.testclient import TestClient
 import sys
 import os
+from src.api.main import app
 
 # Add project root to path
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, project_root)
-
-from src.api.main import app
 
 client = TestClient(app)
 
@@ -83,7 +82,7 @@ class TestErrorHandling:
 
     def test_missing_required_field_classify(self):
         payload = {
-            # Manque data_source
+            # Missing data_source
             "route_id": "AT-001",
             "id_origin_city": "Vienna",
             "id_destination_city": "Salzburg",
@@ -95,7 +94,7 @@ class TestErrorHandling:
     def test_missing_required_field_route_id(self):
         payload = {
             "data_source": "austria_etl",
-            # Manque route_id
+            # Missing route_id
             "id_origin_city": "Vienna",
             "id_destination_city": "Salzburg",
             "weekly_train": 5,
@@ -109,10 +108,10 @@ class TestErrorHandling:
             "route_id": "AT-001",
             "id_origin_city": "Vienna",
             "id_destination_city": "Salzburg",
-            "weekly_train": -5,  # Invalide - doit être >= 0
+            "weekly_train": -5,  # Invalid - must be >= 0
         }
         response = client.post("/ml/classify", json=payload)
-        # Peut être 422 (validation) ou 200 si géré différemment
+        # Can be 422 (validation) or 200 if handled differently
         assert response.status_code in [200, 422]
 
     def test_invalid_weekly_train_type(self):
@@ -121,7 +120,7 @@ class TestErrorHandling:
             "route_id": "AT-001",
             "id_origin_city": "Vienna",
             "id_destination_city": "Salzburg",
-            "weekly_train": "invalid",  # Devrait être un int
+            "weekly_train": "invalid",  # Should be an int
         }
         response = client.post("/ml/classify", json=payload)
         assert response.status_code == 422
