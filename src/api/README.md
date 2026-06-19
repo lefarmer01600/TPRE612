@@ -36,6 +36,42 @@ L'API est disponible sur `http://localhost:8000`
 La documentation interactive Swagger est disponible sur `http://localhost:8000/docs`  
 La documentation alternative ReDoc est disponible sur `http://localhost:8000/redoc`  
 
+## Logs structurés
+
+Le backend FastAPI émet des logs JSON sur la sortie standard, avec une politique de niveaux cohérente :
+
+- `DEBUG` : début de requête (`request_started`)
+- `INFO` : requêtes réussies (codes 2xx/3xx)
+- `WARNING` : erreurs client (codes 4xx)
+- `ERROR` : erreurs serveur (codes 5xx ou exception)
+
+Chaque log de requête inclut les champs contextuels suivants :
+
+- `timestamp`
+- `endpoint`
+- `duration_ms`
+- `status_code`
+- `http_method`
+- `client_ip`
+
+La verbosité globale est pilotée par la variable d'environnement `LOG_LEVEL` (par défaut : `INFO`).
+
+Exemple :
+
+```json
+{
+  "timestamp": "2026-06-19T11:20:42.381126+00:00",
+  "level": "INFO",
+  "logger": "api.request",
+  "message": "request_completed",
+  "endpoint": "/health",
+  "duration_ms": 3.92,
+  "status_code": 200,
+  "http_method": "GET",
+  "client_ip": "127.0.0.1"
+}
+```
+
 ---
 
 ## Structure du projet
