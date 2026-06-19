@@ -1,12 +1,20 @@
 from contextlib import asynccontextmanager
+import logging
+import time
+from datetime import datetime, timezone
 
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, Request
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.api.routers import trajets, gares, trains, operateurs, routes, stats
 from src.api.routers import ml
 from src.api.ml import models as ml_models
 from src.api.auth import verify_token          # ← new
+from src.api.logging_config import setup_logging
+
+
+setup_logging()
+request_logger = logging.getLogger("api.request")
 
 
 @asynccontextmanager
@@ -25,6 +33,65 @@ endpoints protégés par authentification via le bouton Authorize.
     root_path="/api",
     lifespan=lifespan,
 )
+
+
+@app.middleware("http")
+async def structured_request_logging(request: Request, call_next):
+    start_time = time.perf_counter()
+    request_start = datetime.now(timezone.utc).isoformat()
+    endpoint = request.url.path
+    client_ip = request.client.host if request.client else None
+
+    request_logger.debug(
+        "request_started",
+        extra={
+            "timestamp": request_start,
+            "endpoint": endpoint,
+            "http_method": request.method,
+            "client_ip": client_ip,
+        },
+    )
+
+    try:
+        response = await call_next(request)
+    except Exception:
+        duration_ms = round((time.perf_counter() - start_time) * 1000, 2)
+        request_logger.error(
+            "request_failed",
+            exc_info=True,
+            extra={
+                "timestamp": request_start,
+                "endpoint": endpoint,
+                "http_method": request.method,
+                "duration_ms": duration_ms,
+                "status_code": 500,
+                "client_ip": client_ip,
+            },
+        )
+        raise
+
+    duration_ms = round((time.perf_counter() - start_time) * 1000, 2)
+    status_code = response.status_code
+    level = logging.INFO
+    if status_code >= 500:
+        level = logging.ERROR
+    elif status_code >= 400:
+        level = logging.WARNING
+
+    request_logger.log(
+        level,
+        "request_completed",
+        extra={
+            "timestamp": request_start,
+            "endpoint": endpoint,
+            "http_method": request.method,
+            "duration_ms": duration_ms,
+            "status_code": status_code,
+            "client_ip": client_ip,
+        },
+    )
+
+    return response
 
 app.add_middleware(
     CORSMiddleware,
