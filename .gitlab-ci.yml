@@ -77,7 +77,6 @@ deploy_staging:
       docker run -d \
         --name tpre612 \
         --env-file /opt/tpre612/.env \
-        -v /opt/tpre612/.env:/app/.env \
         --add-host host.docker.internal:host-gateway \
         -v /opt/tpre612/data/output:/app/data/output \
         -p 8000:8000 \
