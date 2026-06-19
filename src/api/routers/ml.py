@@ -26,9 +26,15 @@ def classify_relation(payload: RelationInput) -> ClassificationResult:
     try:
         result = ml_models.predict_desserte(payload.model_dump())
     except RuntimeError as exc:
-        raise HTTPException(status_code=503, detail=str(exc))
+        raise HTTPException(
+            status_code=503,
+            detail="Le service de prédiction est temporairement indisponible.",
+        ) from exc
     except Exception as exc:
-        raise HTTPException(status_code=500, detail=f"Prediction error: {exc}")
+        raise HTTPException(
+            status_code=500,
+            detail="Une erreur est survenue pendant la prédiction.",
+        ) from exc
     return ClassificationResult.model_validate(result)
 
 
