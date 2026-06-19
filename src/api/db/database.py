@@ -17,6 +17,8 @@ DB_CONFIG = {
     "host": os.getenv("DB_HOST", "localhost"),
     "port": int(os.getenv("DB_PORT", "5432")),
 }
+print(f"DB_CONFIG: {DB_CONFIG}")
+
 SCHEMA = os.getenv("API_DB_SCHEMA", "tpre612_data_warehouse")
 
 DATABASE_URL = (
