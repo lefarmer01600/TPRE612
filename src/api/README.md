@@ -33,7 +33,8 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 L'API est disponible sur `http://localhost:8000`  
-Documentation Swagger : `http://localhost:8000/docs`  
+La documentation interactive Swagger est disponible sur `http://localhost:8000/docs`  
+La documentation alternative ReDoc est disponible sur `http://localhost:8000/redoc`  
 
 ---
 
@@ -303,3 +304,4 @@ L'API est compatible avec le plugin **JSON API datasource** de Grafana.
 - La pagination utilise `page` (base 1) et `page_size`
 - Les réponses respectent le format JSON standard avec `Content-Type: application/json`
 - La documentation interactive Swagger est auto-générée sur `/docs`
+- ReDoc est également disponible sur `/redoc`
