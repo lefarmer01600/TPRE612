@@ -16,7 +16,11 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="API Data Ferroviaires",
-    description="""...""",
+    description="""API REST pour consulter les dessertes ferroviaires du data warehouse.
+
+La documentation interactive Swagger est disponible sur `/docs` et permet de tester les
+endpoints protégés par authentification via le bouton Authorize.
+""",
     version="1.0.0",
     root_path="/api",
     lifespan=lifespan,
