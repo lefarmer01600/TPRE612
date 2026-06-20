@@ -70,20 +70,20 @@ deploy_staging:
   stage: deploy
   image: docker:24
   script:
+    - cd /opt/tpre612
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker compose pull
+    - docker compose up -d --force-recreate
     - |
-      docker pull $CI_REGISTRY_IMAGE:latest
-      docker stop tpre612 || true
-      docker rm tpre612 || true
-      docker run -d \
-        --name tpre612 \
-        --env-file /opt/tpre612/.env \
-        --add-host host.docker.internal:host-gateway \
-        --network grafana_grafana-net \
-        --log-driver loki \
-        --log-opt loki-url="http://localhost:3100/loki/api/v1/push" \
-        --log-opt loki-external-labels="container=tpre612" \
-        -v /opt/tpre612/data/output:/app/data/output \
-        -p 8000:8000 \
-        $CI_REGISTRY_IMAGE:latest
+      echo "Attente du healthcheck..."
+      for i in $(seq 1 30); do
+        STATUS=$(docker inspect --format='{{.State.Health.Status}}' tpre612 2>/dev/null || echo "starting")
+        echo "  tentative $i → $STATUS"
+        [ "$STATUS" = "healthy" ] && echo "healthy" && exit 0
+        sleep 5
+      done
+      echo "Not healthy"
+      docker logs tpre612 --tail 50
+      exit 1
   only:
     - main
