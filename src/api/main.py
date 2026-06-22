@@ -10,7 +10,13 @@ from src.api.routers import trajets, gares, trains, operateurs, routes, stats
 from src.api.routers import ml
 from src.api.ml import models as ml_models
 from src.api.auth import verify_token          # ← new
+from src.api.error_handlers import register_error_handlers
 from src.api.logging_config import setup_logging
+
+from fastapi.responses import JSONResponse
+from sqlalchemy import text
+from src.api.db.database import engine
+
 
 
 setup_logging()
@@ -33,6 +39,8 @@ endpoints protégés par authentification via le bouton Authorize.
     root_path="/api",
     lifespan=lifespan,
 )
+
+register_error_handlers(app)
 
 
 @app.middleware("http")
@@ -132,3 +140,17 @@ def root():
 @app.get("/health", tags=["Santé"])
 def health():
     return {"status": "healthy"}
+
+
+@app.get("/health/ready", tags=["Santé"])
+def readiness():
+    """Readiness probe : vérifie la connexion à PostgreSQL (standalone)."""
+    try:
+        with engine.connect() as conn:
+            conn.execute(text("SELECT 1"))
+        return {"status": "ready", "database": "up"}
+    except Exception as exc:
+        return JSONResponse(
+            status_code=503,
+            content={"status": "degraded", "database": "down", "detail": str(exc)},
+        )

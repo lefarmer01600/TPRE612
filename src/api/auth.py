@@ -23,14 +23,14 @@ def verify_token(credentials: HTTPAuthorizationCredentials = Security(security))
 
     if not VALID_TOKENS:
         raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="No API tokens configured on the server",
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Le service d'authentification est temporairement indisponible.",
         )
 
     if token not in VALID_TOKENS:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid or expired token",
+            detail="Authentification requise ou invalide.",
             headers={"WWW-Authenticate": "Bearer"},
         )
 
