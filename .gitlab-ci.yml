@@ -45,8 +45,11 @@ test:
     POSTGRES_PASSWORD: $CI_POSTGRES_PASSWORD
     DATABASE_URL: postgresql://$CI_POSTGRES_USER:$CI_POSTGRES_PASSWORD@postgres:5432/$CI_POSTGRES_DB
   script:
-    - uv run pytest src/ --tb=short -q || true
+    - uv run pytest src/ test/ --tb=short -q || true
   allow_failure: true
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+      when: always
 
 # ── BUILD ─────────────────────────────────────────────────────────────────────
 
