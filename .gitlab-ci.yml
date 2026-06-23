@@ -36,16 +36,40 @@ lint:
 test:
   stage: test
   <<: *uv_setup
+  needs:
+    - job: lint
+      artifacts: false
   services:
     - name: postgres:15
       alias: postgres
   variables:
-    POSTGRES_DB: $CI_POSTGRES_DB
-    POSTGRES_USER: $CI_POSTGRES_USER
-    POSTGRES_PASSWORD: $CI_POSTGRES_PASSWORD
-    DATABASE_URL: postgresql://$CI_POSTGRES_USER:$CI_POSTGRES_PASSWORD@postgres:5432/$CI_POSTGRES_DB
+    POSTGRES_DB: "$CI_POSTGRES_DB"
+    POSTGRES_USER: "$CI_POSTGRES_USER"
+    POSTGRES_PASSWORD: "$CI_POSTGRES_PASSWORD"
+    POSTGRES_HOST_AUTH_METHOD: "trust"
+    DATABASE_URL: "postgresql://$CI_POSTGRES_USER:$CI_POSTGRES_PASSWORD@postgres:5432/$CI_POSTGRES_DB"
   script:
-    - uv run pytest src/ test/ --tb=short -q || true
+    - echo "waiting for postgres..."
+    - |
+      for i in $(seq 1 20); do
+        python -c "
+      import psycopg2, os, sys
+      try:
+          psycopg2.connect(os.environ['DATABASE_URL'])
+          sys.exit(0)
+      except:
+          sys.exit(1)
+      " && echo "postgres is up" && break || (echo "attempt $i/20, retrying..." && sleep 3)
+      done
+    - echo "running tests..."
+    - uv run pytest src/ test/ --tb=short -q --junitxml=report.xml
+  artifacts:
+    when: always
+    reports:
+      junit: report.xml
+    paths:
+      - report.xml
+    expire_in: 7 days
   allow_failure: true
   rules:
     - if: '$CI_PIPELINE_SOURCE == "schedule"'
