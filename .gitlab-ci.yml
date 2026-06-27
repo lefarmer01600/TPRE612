@@ -74,7 +74,7 @@ test:
       " && echo "postgres is up" && break || (echo "attempt $i/20, retrying..." && sleep 3)
       done
     - echo "running tests..."
-    - uv run pytest src/ --tb=short -q --junitxml=report.xml
+    - uv run pytest src/ test/ --tb=short -q --junitxml=report.xml
   artifacts:
     when: always
     reports:
@@ -84,8 +84,8 @@ test:
     expire_in: 7 days
   allow_failure: true
   rules:
-    - if: '$CI_COMMIT_BRANCH'
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+      when: always
 
 # ── BUILD ─────────────────────────────────────────────────────────────────────
 
