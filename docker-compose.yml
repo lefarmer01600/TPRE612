@@ -26,8 +26,8 @@ services:
       retries: 3
 
   frontend:
-    image: registry.tclemenceau.fr/mspr/frontend:latest
-    container_name: tpre612-frontend
+    image: registry.tclemenceau.fr/mspr/tpre532:latest
+    container_name: tpre532-frontend
     restart: unless-stopped
     depends_on:
       backend:
@@ -40,7 +40,7 @@ services:
       driver: loki
       options:
         loki-url: "http://localhost:3100/loki/api/v1/push"
-        loki-external-labels: "container=tpre612-frontend"
+        loki-external-labels: "container=tpre532-frontend"
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8501/healthz').status==200 else 1)"]
       interval: 30s
