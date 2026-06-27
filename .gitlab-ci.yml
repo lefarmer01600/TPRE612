@@ -48,9 +48,7 @@ lint:
 test:
   stage: test
   <<: *uv_setup
-  needs:
-    - job: lint
-      artifacts: false
+  needs: []
   services:
     - name: postgres:15
       alias: postgres
@@ -84,6 +82,8 @@ test:
     expire_in: 7 days
   allow_failure: true
   rules:
+    - if: '$CI_COMMIT_BRANCH'
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
     - if: '$CI_PIPELINE_SOURCE == "schedule"'
       when: always
 
@@ -94,7 +94,7 @@ build:
   image: docker:24
   needs:
     - job: test
-      artifacts: false
+      optional: true
   before_script:
     - *docker_login
   script:
@@ -131,7 +131,7 @@ deploy_staging:
   image: docker:24
   needs:
     - job: build
-      artifacts: false
+      optional: true
   variables:
     GIT_STRATEGY: none
     CI_COMMIT_SHA: "$CI_COMMIT_SHA"
@@ -156,6 +156,7 @@ deploy_staging:
         STATUS=$(docker inspect \
           --format='{{.State.Health.Status}}' \
           tpre612-staging 2>/dev/null || echo "starting")
+
         echo "  attempt $i/30 -> $STATUS"
 
         if [ "$STATUS" = "healthy" ]; then
@@ -211,7 +212,7 @@ deploy_production:
   image: docker:24
   needs:
     - job: build
-      artifacts: false
+      optional: true
   variables:
     GIT_STRATEGY: none
   before_script:
