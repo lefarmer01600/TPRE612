@@ -29,6 +29,8 @@ services:
     image: registry.tclemenceau.fr/mspr/tpre532:latest
     container_name: tpre532-frontend
     restart: unless-stopped
+    env_file:
+      - /opt/tpre612/.env
     depends_on:
       backend:
         condition: service_healthy
