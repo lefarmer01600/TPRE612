@@ -1,0 +1,68 @@
+services:
+  grafana:
+    image: grafana/grafana-enterprise
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    user: "472"
+    environment:
+      - GF_PLUGIN_YESOREYERAM_INFINITY_DATASOURCE_ALLOW_LOCALHOST_RESOURCES=true
+      - GF_PATHS_CONFIG=/etc/grafana/grafana.ini
+      - GF_PATHS_DATA=/var/lib/grafana
+      - GF_PATHS_HOME=/usr/share/grafana
+      - GF_PATHS_LOGS=/var/log/grafana
+      - GF_PATHS_PLUGINS=/var/lib/grafana/plugins
+      - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
+      - GF_UNIFIED_ALERTING_ENABLED=true
+      - GF_SMTP_ENABLED=true
+      - GF_SMTP_HOST=smtp.gmail.com:587
+      - GF_SMTP_USER=obrail-alerts@gmail.com
+      - GF_SMTP_PASSWORD=ton_app_password
+      - GF_SMTP_FROM_ADDRESS=obrail-alerts@gmail.com
+      - GF_SMTP_FROM_NAME=ObRail Alerting
+    volumes:
+      - ./grafana-data:/var/lib/grafana
+      - ./grafana-config:/etc/grafana
+    networks:
+      - grafana-net
+
+  loki:
+    image: grafana/loki:2.9.0
+    container_name: loki
+    restart: unless-stopped
+    command: -config.file=/etc/loki/config.yml
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./loki-config.yml:/etc/loki/config.yml:ro
+      - ./loki-data:/loki
+    networks:
+      - grafana-net
+
+  # ← Alloy remplace Promtail (officiellement recommandé par Grafana Labs)
+  alloy:
+    image: grafana/alloy:latest
+    container_name: alloy
+    restart: unless-stopped
+    command:
+      - run
+      - /etc/alloy/config.alloy
+      - --storage.path=/var/lib/alloy
+    volumes:
+      - ./alloy-config.alloy:/etc/alloy/config.alloy:ro
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - alloy-data:/var/lib/alloy
+    networks:
+      - grafana-net
+    depends_on:
+      - loki
+
+volumes:
+  alloy-data:
+
+networks:
+  grafana-net:
+    driver: bridge
+
