@@ -1,0 +1,1044 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "links": [],
+  "panels": [
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 100,
+      "panels": [],
+      "title": "Carte des trajets",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "dfgap1jll8q9sd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "text",
+            "mode": "thresholds"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "latitude"
+            },
+            "properties": []
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "longitude"
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 22,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "id": 5,
+      "options": {
+        "basemap": {
+          "config": {
+            "showLabels": true,
+            "theme": "light"
+          },
+          "name": "Layer 0",
+          "noRepeat": false,
+          "type": "carto"
+        },
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": true,
+          "showDebug": false,
+          "showMeasure": false,
+          "showScale": false,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "showLegend": false,
+              "style": {
+                "color": {
+                  "fixed": "#000000"
+                },
+                "opacity": 1,
+                "rotation": {
+                  "fixed": 0,
+                  "max": 360,
+                  "min": -360,
+                  "mode": "mod"
+                },
+                "size": {
+                  "fixed": 5,
+                  "max": 15,
+                  "min": 2
+                },
+                "symbol": {
+                  "field": "",
+                  "fixed": "https://api.iconify.design/mdi/train.svg",
+                  "mode": "fixed"
+                },
+                "symbolAlign": {
+                  "horizontal": "center",
+                  "vertical": "center"
+                },
+                "text": {
+                  "fixed": "",
+                  "mode": "fixed"
+                },
+                "textConfig": {
+                  "fontSize": 12,
+                  "offsetX": 0,
+                  "offsetY": 0,
+                  "textAlign": "center",
+                  "textBaseline": "middle"
+                }
+              }
+            },
+            "filterData": {
+              "id": "byRefId",
+              "options": "Big gares"
+            },
+            "location": {
+              "mode": "auto"
+            },
+            "name": "gares",
+            "tooltip": true,
+            "type": "markers"
+          }
+        ],
+        "tooltip": {
+          "mode": "details"
+        },
+        "view": {
+          "allLayers": true,
+          "dashboardVariable": false,
+          "id": "coords",
+          "lat": 46.720287,
+          "lon": 5.189407,
+          "noRepeat": false,
+          "zoom": 6.02
+        }
+      },
+      "pluginVersion": "12.4.1",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "name",
+              "text": "name",
+              "type": "string"
+            },
+            {
+              "selector": "city",
+              "text": "city",
+              "type": "string"
+            },
+            {
+              "selector": "country",
+              "text": "country",
+              "type": "string"
+            },
+            {
+              "selector": "latitude",
+              "text": "latitude",
+              "type": "number"
+            },
+            {
+              "selector": "longitude",
+              "text": "longitude",
+              "type": "number"
+            },
+            {
+              "selector": "is_main_station",
+              "text": "is_main_station",
+              "type": "boolean"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "grafanacloud-infinity"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "method": "GET",
+          "refId": "gares",
+          "root_selector": "data",
+          "source": "url",
+          "type": "json",
+          "url": "https://api.tclemenceau.fr/gares?is_main_station=true&page_size=83000",
+          "url_options": {
+            "data": "",
+            "headers": [],
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Carte des gares européennes",
+      "type": "geomap"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "dfgap1jll8q9sd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 22,
+        "w": 12,
+        "x": 12,
+        "y": 1
+      },
+      "id": 105,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "Temps de trajet"
+          }
+        ]
+      },
+      "pluginVersion": "12.4.1",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "destination",
+              "text": "arrivé",
+              "type": "string"
+            },
+            {
+              "selector": "origin",
+              "text": "Départ",
+              "type": "string"
+            },
+            {
+              "selector": "duration",
+              "text": "Temps de trajet",
+              "type": "string"
+            },
+            {
+              "selector": "trip_id",
+              "text": "Numéro de train",
+              "type": "string"
+            }
+          ],
+          "computed_columns": [],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "grafanacloud-infinity"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "data\n",
+          "source": "url",
+          "type": "json",
+          "url": "${train_type}",
+          "url_options": {
+            "data": "",
+            "headers": [],
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Liste des trains",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "dfgap1jll8q9sd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 23
+      },
+      "id": 109,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "duree en minutes"
+          }
+        ]
+      },
+      "pluginVersion": "12.4.1",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "emissions_co2",
+              "text": "emissions de co2",
+              "type": "string"
+            },
+            {
+              "selector": "average_speed",
+              "text": "vitesse moyenne",
+              "type": "string"
+            },
+            {
+              "selector": "duree_minutes",
+              "text": "duree en minutes",
+              "type": "string"
+            },
+            {
+              "selector": "distance_km",
+              "text": "distance en km",
+              "type": "string"
+            },
+            {
+              "selector": "route.origin",
+              "text": "Départ",
+              "type": "string"
+            },
+            {
+              "selector": "route.destination",
+              "text": "Arrivé",
+              "type": "string"
+            },
+            {
+              "selector": "operateur.agency_name",
+              "text": "Compagnie",
+              "type": "string"
+            }
+          ],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "grafanacloud-infinity"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "data",
+          "source": "url",
+          "type": "json",
+          "url": "https://api.tclemenceau.fr/trajets",
+          "url_options": {
+            "data": "",
+            "headers": [],
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Détails Trajet",
+      "type": "table"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 33
+      },
+      "id": 101,
+      "panels": [],
+      "title": "Comparaison CO₂",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "dfgap1jll8q9sd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "mappings": [],
+          "max": 40,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 12,
+        "x": 0,
+        "y": 34
+      },
+      "id": 106,
+      "options": {
+        "displayMode": "lcd",
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "maxVizHeight": 300,
+        "minVizHeight": 16,
+        "minVizWidth": 8,
+        "namePlacement": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/^moyenne_emissions_co2$/",
+          "limit": 200,
+          "values": true
+        },
+        "showUnfilled": true,
+        "sizing": "auto",
+        "valueMode": "color"
+      },
+      "pluginVersion": "12.4.1",
+      "targets": [
+        {
+          "columns": [],
+          "computed_columns": [],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "grafanacloud-infinity"
+          },
+          "filterExpression": "total_emissions_co2 != 0",
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "",
+          "source": "url",
+          "summarizeBy": "",
+          "summarizeExpression": "",
+          "type": "json",
+          "url": "https://api.tclemenceau.fr/stats/emissions",
+          "url_options": {
+            "data": "",
+            "headers": [],
+            "method": "GET",
+            "params": []
+          }
+        }
+      ],
+      "title": "moyenne des emissions de c02 pour les trains",
+      "transformations": [
+        {
+          "id": "groupBy",
+          "options": {
+            "fields": {
+              "label": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "moyenne_emissions_co2": {
+                "aggregations": [],
+                "operation": "groupby"
+              }
+            }
+          }
+        }
+      ],
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "dfgap1jll8q9sd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 12,
+        "x": 12,
+        "y": 34
+      },
+      "id": 107,
+      "options": {
+        "displayMode": "lcd",
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "maxVizHeight": 300,
+        "minVizHeight": 16,
+        "minVizWidth": 8,
+        "namePlacement": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [],
+          "fields": "/^total_emissions_co2$/",
+          "limit": 200,
+          "values": true
+        },
+        "showUnfilled": true,
+        "sizing": "auto",
+        "valueMode": "color"
+      },
+      "pluginVersion": "12.4.1",
+      "targets": [
+        {
+          "columns": [],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "grafanacloud-infinity"
+          },
+          "filterExpression": "moyenne_emissions_co2 != 0",
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "",
+          "source": "url",
+          "type": "json",
+          "url": "https://api.tclemenceau.fr/stats/emissions",
+          "url_options": {
+            "data": "",
+            "headers": [],
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "total des emissions de c02 pour les trains",
+      "transformations": [
+        {
+          "id": "groupBy",
+          "options": {
+            "fields": {
+              "label": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "total_emissions_co2": {
+                "aggregations": [],
+                "operation": "groupby"
+              }
+            }
+          }
+        }
+      ],
+      "type": "bargauge"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "dfgap1jll8q9sd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Départ"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
+                  {
+                    "title": "Voir détails",
+                    "url": "/d/obrail-europe-v1?var-trajet=${__value.text}&${__url.params}"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 0,
+        "y": 48
+      },
+      "id": 110,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "avion_empreinte_carbone_kgco2e"
+          }
+        ]
+      },
+      "pluginVersion": "12.4.1",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "origine",
+              "text": "Départ",
+              "type": "string"
+            },
+            {
+              "selector": "destination",
+              "text": "Arriver",
+              "type": "string"
+            },
+            {
+              "selector": "train_empreinte_carbone_kgco2e",
+              "text": "Train(kgco2e)",
+              "type": "string"
+            },
+            {
+              "selector": "avion_empreinte_carbone_kgco2e",
+              "text": "Avion(kgco2e)",
+              "type": "string"
+            }
+          ],
+          "data": "transporteur,origine,origine_uic,destination,destination_uic,distance_entre_les_gares,train_empreinte_carbone_kgco2e,distance_routiere,distance_aerienne,avion_empreinte_carbone_kgco2e,duree_estimee_min\nTGV,Paris Gare de Lyon,87686006,Montpellier Saint-Roch,87773002,738.861,2.5860135,749.0,596.0,74.5,158.3\nTGV,Aéroport Charles de Gaulle 2 TGV,87271494,Bruxelles Midi Brussel Zuid,88140010,291.0,1.0185,289.0,241.0,30.125,62.4\nTGV,Paris Gare de Lyon,87686006,Marseille Saint-Charles,87751008,750.138,2.625483,775.0,662.0,82.75,160.7\nTGV,Lyon Part Dieu,87723197,Marseille Saint-Charles,87751008,325.0,1.1375,315.0,277.0,34.625,69.6\nInternational,Paris Gare de Lyon,87686006,Torino Porta Susa,83002220,734.0,7.2666,776.0,586.0,73.25,220.2\nInternational,Paris Gare de Lyon,87686006,Milano P Garibaldi,83016451,877.0,8.682300000000001,913.0,642.0,80.25,263.1\nTGV,Paris Montparnasse,87391003,Brest,87474007,613.0,2.1455,592.0,503.0,62.875,131.4\nTGV,Paris Montparnasse,87391003,Nantes,87481002,385.841,1.3504435,386.0,341.0,42.625,82.7\nTGV,Paris Montparnasse,87391003,Biarritz,87673400,744.496,2.605736,783.0,669.0,83.625,159.5\nIntercités,Paris-Gare-de-Lyon,87686006,Clermont-Ferrand,87734004,419.0,2.8073,424.0,348.0,43.5,179.6\nInternational,Marseille Saint-Charles,87751008,Bruxelles Midi Brussel Zuid,88140010,1072.0,7.289599999999999,1027.0,844.0,105.5,321.6\nInternational,Paris Est,87113001,Frankfurt Main HBF,80110684,659.0,5.996899999999999,573.0,481.0,60.125,197.7\nInternational,Paris Gare de Lyon,87686006,Barcelona Sants,71718010,1076.0,3.766,1038.0,832.0,104.0,322.8\nInternational,Paris Nord,88194060,Schiphol Airport,84005611,510.0,3.468,509.0,421.0,52.625,153.0\nTGV,Paris Montparnasse,87391003,Rennes,87471003,363.952,1.273832,350.0,307.0,38.375,78.0\nTGV,Paris Gare de Lyon,87686006,Lyon Part Dieu,87723197,429.496,1.5032359999999998,465.0,394.0,49.25,92.0\nTGV,Paris Gare de Lyon,87686006,Toulon,87755009,812.0,2.842,839.0,696.0,87.0,174.0\nTGV,Paris Montparnasse,87391003,Bordeaux Saint-Jean,87581009,537.13,1.879955,587.0,498.0,62.25,115.1\nTGV,Aéroport Charles de Gaulle 2 TGV,87271494,Lyon Part Dieu,87723197,442.0,1.547,499.0,400.0,50.0,94.7\nIntercités,Paris-Austerlitz,87547000,Rodez,87613422,660.0,4.422,660.0,502.0,62.75,282.9\nIntercités,Lyon-Part-Dieu,87723197,Nantes,87481002,812.0,5.4404,686.0,516.0,64.5,348.0\nInternational,Aéroport Charles de Gaulle 2 TGV,87271494,Bruxelles Midi Brussel Zuid,88140010,310.0,2.108,287.0,241.0,30.125,93.0\nInternational,Paris Gare de Lyon,87686006,Geneve,85010082,503.0,2.012,541.0,412.0,51.5,150.9\nInternational,Paris Est,87113001,Luxembourg,82001000,373.0,2.5364,374.0,296.0,37.0,111.9\nTGV,Bruxelles Midi Brussel Zuid,88140010,Lyon Part Dieu,87723197,733.0,2.5655,717.0,568.0,71.0,157.1\nTGV,Paris Est,87113001,Mulhouse,87182063,495.0,1.7325,541.0,392.0,49.0,106.1\nTGV,Paris Montparnasse,87391003,Toulouse Matabiau,87611004,793.993,2.7789755,679.0,589.0,73.625,170.1\nInternational,Paris Est,87113001,Muenchen HBF,80203471,843.0,7.6713,833.0,687.0,85.875,252.9\nInternational,Paris Est,87113001,Stuttgart HBF,80290346,608.0,5.5328,622.0,503.0,62.875,182.4\nTGV,Paris Gare de Lyon,87686006,Nice,87756056,971.68,3.4008799999999995,934.0,689.0,86.125,208.2\nTGV,Aéroport Charles de Gaulle 2 TGV,87271494,Rennes,87471003,421.0,1.4735,382.0,329.0,41.125,90.2\nTGV,Strasbourg Ville,87212027,Nantes,87481002,834.0,2.919,865.0,710.0,88.75,178.7\nIntercités,Marseille Saint-Charles,87751008,Bordeaux Saint-Jean,87581009,680.0,4.556,647.0,506.0,63.25,291.4\nInternational,Paris Gare de Lyon,87686006,Zuerich HB,85030007,614.0,2.456,655.0,491.0,61.375,184.2\nInternational,Paris Nord,88194060,London St-Pancras,70154005,496.0,3.3728,462.0,342.0,42.75,148.8\nInternational,Paris Nord,88194060,Bruxelles N Aero,88194060,314.0,2.1352,312.0,265.0,33.125,94.2\nInternational,Lyon Part Dieu,87723197,Bruxelles Midi Brussel Zuid,88140010,751.0,5.1068,716.0,568.0,71.0,225.3\nInternational,Paris Nord,88194060,Amsterdam Centraal,84000588,545.0,3.706,509.0,431.0,53.875,163.5\n",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "grafanacloud-infinity"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "",
+          "source": "inline",
+          "type": "csv",
+          "url": "https://raw.githubusercontent.com/Kevynflrs/rawdata/refs/heads/main/sncf_emissions_co2.csv",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Comparaison Avion Vs Train",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "dfgap1jll8q9sd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 12,
+        "y": 48
+      },
+      "id": 111,
+      "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.3,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": true
+        },
+        "endpointMarker": "point",
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": false,
+        "sizing": "auto",
+        "sparkline": false,
+        "textMode": "auto"
+      },
+      "pluginVersion": "12.4.1",
+      "targets": [
+        {
+          "columns": [
+            {
+              "selector": "train_empreinte_carbone_kgco2e",
+              "text": "Train(kgco2e)",
+              "type": "number"
+            },
+            {
+              "selector": "avion_empreinte_carbone_kgco2e",
+              "text": "Avion(kgco2e)",
+              "type": "number"
+            },
+            {
+              "selector": "destination",
+              "text": "Arriver",
+              "type": "string"
+            },
+            {
+              "selector": "origine",
+              "text": "Départ",
+              "type": "string"
+            }
+          ],
+          "csv_options": {
+            "delimiter": ""
+          },
+          "data": "transporteur,origine,origine_uic,destination,destination_uic,distance_entre_les_gares,train_empreinte_carbone_kgco2e,distance_routiere,distance_aerienne,avion_empreinte_carbone_kgco2e,duree_estimee_min\nTGV,Paris Gare de Lyon,87686006,Montpellier Saint-Roch,87773002,738.861,2.5860135,749.0,596.0,74.5,158.3\nTGV,Aéroport Charles de Gaulle 2 TGV,87271494,Bruxelles Midi Brussel Zuid,88140010,291.0,1.0185,289.0,241.0,30.125,62.4\nTGV,Paris Gare de Lyon,87686006,Marseille Saint-Charles,87751008,750.138,2.625483,775.0,662.0,82.75,160.7\nTGV,Lyon Part Dieu,87723197,Marseille Saint-Charles,87751008,325.0,1.1375,315.0,277.0,34.625,69.6\nInternational,Paris Gare de Lyon,87686006,Torino Porta Susa,83002220,734.0,7.2666,776.0,586.0,73.25,220.2\nInternational,Paris Gare de Lyon,87686006,Milano P Garibaldi,83016451,877.0,8.682300000000001,913.0,642.0,80.25,263.1\nTGV,Paris Montparnasse,87391003,Brest,87474007,613.0,2.1455,592.0,503.0,62.875,131.4\nTGV,Paris Montparnasse,87391003,Nantes,87481002,385.841,1.3504435,386.0,341.0,42.625,82.7\nTGV,Paris Montparnasse,87391003,Biarritz,87673400,744.496,2.605736,783.0,669.0,83.625,159.5\nIntercités,Paris-Gare-de-Lyon,87686006,Clermont-Ferrand,87734004,419.0,2.8073,424.0,348.0,43.5,179.6\nInternational,Marseille Saint-Charles,87751008,Bruxelles Midi Brussel Zuid,88140010,1072.0,7.289599999999999,1027.0,844.0,105.5,321.6\nInternational,Paris Est,87113001,Frankfurt Main HBF,80110684,659.0,5.996899999999999,573.0,481.0,60.125,197.7\nInternational,Paris Gare de Lyon,87686006,Barcelona Sants,71718010,1076.0,3.766,1038.0,832.0,104.0,322.8\nInternational,Paris Nord,88194060,Schiphol Airport,84005611,510.0,3.468,509.0,421.0,52.625,153.0\nTGV,Paris Montparnasse,87391003,Rennes,87471003,363.952,1.273832,350.0,307.0,38.375,78.0\nTGV,Paris Gare de Lyon,87686006,Lyon Part Dieu,87723197,429.496,1.5032359999999998,465.0,394.0,49.25,92.0\nTGV,Paris Gare de Lyon,87686006,Toulon,87755009,812.0,2.842,839.0,696.0,87.0,174.0\nTGV,Paris Montparnasse,87391003,Bordeaux Saint-Jean,87581009,537.13,1.879955,587.0,498.0,62.25,115.1\nTGV,Aéroport Charles de Gaulle 2 TGV,87271494,Lyon Part Dieu,87723197,442.0,1.547,499.0,400.0,50.0,94.7\nIntercités,Paris-Austerlitz,87547000,Rodez,87613422,660.0,4.422,660.0,502.0,62.75,282.9\nIntercités,Lyon-Part-Dieu,87723197,Nantes,87481002,812.0,5.4404,686.0,516.0,64.5,348.0\nInternational,Aéroport Charles de Gaulle 2 TGV,87271494,Bruxelles Midi Brussel Zuid,88140010,310.0,2.108,287.0,241.0,30.125,93.0\nInternational,Paris Gare de Lyon,87686006,Geneve,85010082,503.0,2.012,541.0,412.0,51.5,150.9\nInternational,Paris Est,87113001,Luxembourg,82001000,373.0,2.5364,374.0,296.0,37.0,111.9\nTGV,Bruxelles Midi Brussel Zuid,88140010,Lyon Part Dieu,87723197,733.0,2.5655,717.0,568.0,71.0,157.1\nTGV,Paris Est,87113001,Mulhouse,87182063,495.0,1.7325,541.0,392.0,49.0,106.1\nTGV,Paris Montparnasse,87391003,Toulouse Matabiau,87611004,793.993,2.7789755,679.0,589.0,73.625,170.1\nInternational,Paris Est,87113001,Muenchen HBF,80203471,843.0,7.6713,833.0,687.0,85.875,252.9\nInternational,Paris Est,87113001,Stuttgart HBF,80290346,608.0,5.5328,622.0,503.0,62.875,182.4\nTGV,Paris Gare de Lyon,87686006,Nice,87756056,971.68,3.4008799999999995,934.0,689.0,86.125,208.2\nTGV,Aéroport Charles de Gaulle 2 TGV,87271494,Rennes,87471003,421.0,1.4735,382.0,329.0,41.125,90.2\nTGV,Strasbourg Ville,87212027,Nantes,87481002,834.0,2.919,865.0,710.0,88.75,178.7\nIntercités,Marseille Saint-Charles,87751008,Bordeaux Saint-Jean,87581009,680.0,4.556,647.0,506.0,63.25,291.4\nInternational,Paris Gare de Lyon,87686006,Zuerich HB,85030007,614.0,2.456,655.0,491.0,61.375,184.2\nInternational,Paris Nord,88194060,London St-Pancras,70154005,496.0,3.3728,462.0,342.0,42.75,148.8\nInternational,Paris Nord,88194060,Bruxelles N Aero,88194060,314.0,2.1352,312.0,265.0,33.125,94.2\nInternational,Lyon Part Dieu,87723197,Bruxelles Midi Brussel Zuid,88140010,751.0,5.1068,716.0,568.0,71.0,225.3\nInternational,Paris Nord,88194060,Amsterdam Centraal,84000588,545.0,3.706,509.0,431.0,53.875,163.5\n",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "grafanacloud-infinity"
+          },
+          "filters": [],
+          "format": "dataframe",
+          "global_query_id": "",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "",
+          "source": "inline",
+          "type": "csv",
+          "url": "https://raw.githubusercontent.com/Kevynflrs/rawdata/refs/heads/main/emissions_co2.csv",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Emission Train Vs Avion",
+      "type": "gauge"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 58
+      },
+      "id": 103,
+      "panels": [],
+      "title": "Sources des données",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "dfgap1jll8q9sd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 59
+      },
+      "id": 108,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true
+      },
+      "pluginVersion": "12.4.1",
+      "targets": [
+        {
+          "columns": [],
+          "data": "[{\"source\":\"transport.data.gouv.fr\",\"format\":\"API\"},\n{\"source\":\"European Data Portal\",\"format\":\"API\"},\n{\"source\":\"Transitland\",\"format\":\"API\"},\n{\"source\":\"Eurostat\",\"format\":\"API\"},\n{\"source\":\"OpenMobilityData\",\"format\":\"API\"},\n{\"source\":\"SNCF\",\"format\":\"CSV\"},\n{\"source\":\"Back-on-Track Night Train Database\",\"format\":\"Github\"}]",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "grafanacloud-infinity"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "parser": "backend",
+          "refId": "A",
+          "root_selector": "",
+          "source": "inline",
+          "type": "json",
+          "url": "",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Sources de données intégrées",
+      "type": "table"
+    }
+  ],
+  "preload": false,
+  "refresh": "5m",
+  "schemaVersion": 42,
+  "tags": [
+    "obrail",
+    "ferroviaire",
+    "co2",
+    "etl"
+  ],
+  "templating": {
+    "list": [
+      {
+        "allowCustomValue": false,
+        "current": {
+          "text": "https://api.tclemenceau.fr/trains",
+          "value": "https://api.tclemenceau.fr/trains"
+        },
+        "label": "Type de train",
+        "name": "train_type",
+        "options": [],
+        "query": "Tous les trains : https://api.tclemenceau.fr/trains, \nTrain de nuit : https://api.tclemenceau.fr/trains?is_night_train=true, \nTrain de jour : https://api.tclemenceau.fr/trains?is_night_train=false",
+        "type": "custom",
+        "valuesFormat": "csv"
+      },
+      {
+        "current": {
+          "text": "https://api.tclemenceau.fr/trains",
+          "value": "https://api.tclemenceau.fr/trains"
+        },
+        "hide": 2,
+        "label": "trains_url",
+        "name": "trains_url",
+        "options": [],
+        "query": "https://api.tclemenceau.fr/trains",
+        "type": "custom",
+        "valuesFormat": "csv"
+      },
+      {
+        "current": {
+          "text": "",
+          "value": ""
+        },
+        "hide": 2,
+        "name": "trajet",
+        "options": [],
+        "query": "",
+        "type": "custom",
+        "valuesFormat": "csv"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-30d",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "ObRail Europe",
+  "uid": "obrail-europe-v1",
+  "version": 25,
+  "weekStart": ""
+}
